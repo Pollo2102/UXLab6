@@ -28,21 +28,29 @@ class Home extends Component {
         this.update = this.update.bind(this);
   }
 
+  title = true;
+
   update = (currentState) => {
-    if (currentState === 'Bienvenido a Project Code Names')
+    if (this.title)
+    {
         this.setState({
-        homeTitle: '813N83N1D0 4 PR0J3CT C0D3 N4M3'
-    });
+        homeTitle: '813N83N1D0 4 PR0J3CT C0D3 N4M35'
+        });
+        this.title = false;
+    }
     else
-    this.setState({
-        homeTitle: 'Bienvenido a Project Code Names'
-    });
+    {
+        this.setState({
+            homeTitle: 'Bienvenido a Projects Code Names'
+        });
+        this.title = true;
+    }
   };
 
   render() {
       return (
           <div>
-            <h1>
+            <h1 id='title'>
                 {this.state.homeTitle}
             </h1><br></br>
             <Button onClick={this.update}>BOOM</Button><br></br>
