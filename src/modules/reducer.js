@@ -2,7 +2,16 @@ import ACTIONS from "./action";
 import _ from "lodash";
 
 const defaultState = {
-  items: []
+  items: [{id: 1, description: 'Indigo'}, 
+          {id: 2, description: 'Prince'}, 
+          {id: 3, description: 'Cardigan'}, 
+          {id: 4, description: 'Missile'}, 
+          {id: 5, description: 'Scorpion'}, 
+          {id: 6, description: 'Cricket'}, 
+          {id: 7, description: 'Parachute'}, 
+          {id: 8, description: 'Paradise'}, 
+          {id: 9, description: 'Parmesan'}, 
+          {id: 10, description: 'Silicon'}]
 };
 
 const todoReducer = (state = defaultState, action) => {
